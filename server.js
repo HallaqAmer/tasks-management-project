@@ -2,6 +2,10 @@ import express from "express";
 import dotenv from "dotenv";
 import morgan from "morgan";
 import userRoutes from "./routes/userRoutes.js";
+import boardRoutes from "./routes/boardRoutes.js";
+import listRoutes from "./routes/listRoutes.js";
+
+
 
 dotenv.config();
 
@@ -31,6 +35,9 @@ app.get('/', (req, res) => {
 
 //use routes in the routes folder
 app.use("/api/users",userRoutes);
+app.use("/api/boards",boardRoutes);
+app.use("/api/lists",listRoutes);
+
 
 //if api not available
 app.use((req,res,err) => {
