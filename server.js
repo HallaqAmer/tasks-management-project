@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 import userRoutes from "./routes/userRoutes.js";
 import boardRoutes from "./routes/boardRoutes.js";
-import listRoutes from "./routes/listRoutes.js";
+import listRoutes from "./routes/taskRoutes.js";
 
 
 
@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 //use routes in the routes folder
 app.use("/api/users",userRoutes);
 app.use("/api/boards",boardRoutes);
-app.use("/api/lists",listRoutes);
+app.use("/api/tasks",listRoutes);
 
 
 //if api not available

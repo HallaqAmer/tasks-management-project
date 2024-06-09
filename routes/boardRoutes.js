@@ -5,10 +5,8 @@ import boardController from "../controllers/boardController.js";
 
 const router=express.Router();
 
-router.get('/:id',boardController.getBoardById);
-router.get('/user/:id',boardController.getUserBoards);
-
-
+router.get('/:boardid',boardController.getBoardById);
+router.get('/:boardid/tasks',boardController.getBoardTasks);
 
 
 export default router;
